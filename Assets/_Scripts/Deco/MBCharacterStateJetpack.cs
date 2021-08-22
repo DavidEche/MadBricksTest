@@ -9,7 +9,7 @@ namespace Madbricks
         private float currentWaitTime;
         public MBCharacterStateJetpack(MBCharacter character) : base(character)
         {
-            character.rigidbody2D.gravityScale = 0;
+            character.rigidbody2D.gravityScale = 0f;
         }
 
         public override void ProcessInput(Vector2 direction, bool specialPressed)

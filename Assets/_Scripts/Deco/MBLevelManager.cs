@@ -12,12 +12,12 @@ namespace Madbricks
         public static MBLevelManager GetInstance(){
             if(_instance == null){
                 var newGameObject = new GameObject();
-                newGameObject.name = "MBInputManager";
+                newGameObject.name = "MBLevelManager";
                 _instance = newGameObject.AddComponent<MBLevelManager>();
             }
             return _instance;
         }
-        
+
         public event System.Action<LevelStage> OnLevelStateChanged;
 
         public LevelStage LevelStage { get; private set; } = LevelStage.setup;
