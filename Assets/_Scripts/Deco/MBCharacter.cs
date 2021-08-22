@@ -46,10 +46,6 @@ namespace Madbricks
             currentState.UpdateState();
 
             currentState.ProcessInput(MBInputManager.GetInstance().Direction,MBInputManager.GetInstance().SpecialPressedThisFrame);
-
-            if(Input.GetKeyDown(KeyCode.T)){
-                HandleLevelStageChanged(LevelStage.playing);
-            }
         }
 
         private void HandleLevelStageChanged(LevelStage stage)
