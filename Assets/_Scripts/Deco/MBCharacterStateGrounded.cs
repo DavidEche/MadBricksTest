@@ -17,7 +17,7 @@ namespace Madbricks
 
         public override void ProcessInput(Vector2 direction, bool specialPressed)
         {
-            character.transform.position += new Vector3(direction.x,0,0) * Time.deltaTime *character.VelocityMove;
+            character.transform.position += new Vector3(direction.x,0,0) * Time.deltaTime * character.VelocityMove;
             if(specialPressed && canUseJetPack){
                 character.SetState(new MBCharacterStateJetpack(character));
             }
