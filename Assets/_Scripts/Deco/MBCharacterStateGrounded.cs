@@ -27,7 +27,6 @@ namespace Madbricks
         {
             if(!canUseJetPack){
                currentWaitTime += Time.deltaTime;
-                Debug.Log((int)currentWaitTime);
                if(currentWaitTime >= character.WaitTimeJetpack){
                    canUseJetPack = true;
                }
