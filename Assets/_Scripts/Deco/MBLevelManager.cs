@@ -27,6 +27,10 @@ namespace Madbricks
             SetLevelState(LevelStage.playing);
         }
 
+        public void RestartGame(){
+            SetLevelState(LevelStage.setup);
+        }
+
         public void Win()
         {
             if (LevelStage != LevelStage.playing) { return; }

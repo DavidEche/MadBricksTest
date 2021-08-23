@@ -28,6 +28,7 @@ namespace Madbricks
             get { return jetpackDuration; }
         }
 
+
         public void SetState(MBCharacterStateBase state)
         {
             currentState = state;
@@ -53,6 +54,7 @@ namespace Madbricks
             switch (stage)
             {
                 case LevelStage.setup:
+                    transform.position = Vector3.zero;
                     break;
                 case LevelStage.playing:
                     SetState(new MBCharacterStateGrounded(this));
@@ -64,6 +66,18 @@ namespace Madbricks
                     SetState(new MBCharacterStateDisabled(this));
                     break;
             }
+        }
+        public void ObjectInteraction(EffectObjects effect){
+            switch (effect)
+            {
+                case EffectObjects.Win:
+                    mBLevelManager.Win();
+                    break;
+                case EffectObjects.Lose:
+                    mBLevelManager.Lose();
+                    break;
+            }
+            
         }
     }
 }

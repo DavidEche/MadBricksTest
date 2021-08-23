@@ -17,8 +17,12 @@ namespace Madbricks
             LevelStateChanged(LevelStage.setup);
         }
 
-        public void StartButtonTest(){
+        public void StartButton(){
             mBLevelManager.StartGame();
+        }
+
+        public void RestartButton(){
+            mBLevelManager.RestartGame();
         }
 
         private void LevelStateChanged(LevelStage levelStage){
